@@ -1,0 +1,17 @@
+name: Проверка расширенной фильтрации
+author: Соловьев Д.М.
+description: Проверка корректности работы расширенных возможностей fzf
+test_cases:
+  - name: Проверка поиска точных совпадений
+    type: FUNC
+    author: Соловьев Д.М.
+    description: Проверка работы алгоритма поиска точных совпадений.
+    cmd: echo -e "apple\nbanana\ncherry" | fzf -e -f "aa"
+    expected_result: ""
+
+  - name: Проверка поиска точных совпадений
+    type: FUNC
+    author: Соловьев Д.М.
+    description: Проверка работы алгоритма поиска точных совпадений.
+    cmd: echo -e "apple\nbanana\ncherry" | fzf -e -f "y"
+    expected_result: "cherry"

@@ -1,0 +1,24 @@
+name: Проверка базовой фильтрации
+author: Соловьев Д.М.
+description: Проверка корректности работы fzf
+test_cases:
+  - name: Проверка корректности работы фильтрации
+    type: FUNC
+    author: Соловьев Д.М.
+    description: Проверка корректности работы алгоритма фильтрации
+    cmd: echo -e "apple\nbanana\ncherry" | fzf -f ""
+    expected_result: "apple\nbanana\ncherry"
+
+  - name: Проверка корректности работы фильтрации
+    type: FUNC
+    author: Соловьев Д.М.
+    description: Проверка корректности работы алгоритма фильтрации
+    cmd: echo -e "apple\nbanana\ncherry" | fzf -f "a"
+    expected_result: "apple\nbanana"
+
+  - name: Проверка корректности работы фильтрации
+    type: FUNC
+    author: Соловьев Д.М.
+    description: Проверка корректности работы алгоритма фильтрации
+    cmd: echo -e "apple\nbanana\ncherry" | fzf -f "y"
+    expected_result: "cherry"

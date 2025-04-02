@@ -1,0 +1,10 @@
+name: Интеграция со сторонними инструментами
+author: Соловьев Д.М.
+description: Проверка корректности работы со сторонними инструментами
+test_cases:
+  - name: Проверка работы с ps
+    type: INTEGRATION
+    author: Соловьев Д.М.
+    description:  Проверка возможности использования fzf для работы с процессами
+    cmd: ps | fzf -f "fzf"
+    expected_result: <NOT NULL>
